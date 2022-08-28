@@ -7,6 +7,7 @@ import com.yeongbin.stock.entity.AccountTransactionDetail;
 import com.yeongbin.stock.service.AccountService;
 import com.yeongbin.stock.service.AccountTransactionDetailService;
 import com.yeongbin.stock.service.UserService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.validation.BindingResult;
@@ -19,6 +20,7 @@ import javax.validation.ValidationException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Api(tags = {"3. 계좌내역 추가/목록 API"})
 @RestController
 @RequiredArgsConstructor
 public class AccountTransactionDetailController {

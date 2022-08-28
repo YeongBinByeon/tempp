@@ -38,4 +38,9 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Account> accountList = new ArrayList<>();
 
+    public User(String name, int age, LocalDate registeredDate) {
+        this.name = name;
+        this.age = age;
+        this.registeredDate = registeredDate;
+    }
 }

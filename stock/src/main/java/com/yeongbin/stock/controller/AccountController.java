@@ -1,11 +1,9 @@
 package com.yeongbin.stock.controller;
 
 import com.yeongbin.stock.dto.AccountRegisterDto;
-import com.yeongbin.stock.dto.UserRegisterDto;
 import com.yeongbin.stock.entity.Account;
-import com.yeongbin.stock.entity.User;
 import com.yeongbin.stock.service.AccountService;
-import com.yeongbin.stock.service.UserService;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.validation.BindingResult;
@@ -15,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import javax.validation.ValidationException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Api(tags = {"2. 계좌 추가/목록 API"})
 @RestController
 @RequiredArgsConstructor
 public class AccountController {

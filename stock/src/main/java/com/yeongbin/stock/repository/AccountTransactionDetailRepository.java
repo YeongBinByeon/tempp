@@ -12,4 +12,8 @@ public interface AccountTransactionDetailRepository extends JpaRepository<Accoun
     @Query("select ad from AccountTransactionDetail as ad " +
             "where YEAR(ad.depositDate) = :year")
     List<AccountTransactionDetail> findByYear(@Param("year")int year);
+
+    @Query("select ad from AccountTransactionDetail as ad " +
+            "where ad.depositDate >= :start and ad.depositDate <= :end")
+    List<AccountTransactionDetail> findByDateDuringRange(@Param("start")LocalDate start, @Param("end") LocalDate end);
 }
